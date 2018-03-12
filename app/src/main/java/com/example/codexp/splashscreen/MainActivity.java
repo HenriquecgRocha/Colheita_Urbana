@@ -11,6 +11,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     private Button botao;
+    private Button buttonlogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,8 +27,15 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
+        buttonlogin = findViewById(R.id.buttonlogin);
+        buttonlogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent map = new Intent(MainActivity.this,MapsActivity.class);
+                startActivity(map);
             }
+        });
+        }
         }
 
 
